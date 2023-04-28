@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>To Do List</title>
+        <link rel="stylesheet" href="css/styles.css">
+        
+    </head>
+    <body>
+        <div class="box" id="heading"></div>       <!-- check the CSS 245 8 minutes -->
+            <h1> It's a <%= kindOfDay   %></h1>
+        </div>
+
+        <div class="box">
+            
+            <% for (let i=0; i<newListItems.length; i++) { %>  <!-- loops through all items-->
+             <div class="item">
+                <input type="checkbox">
+                <p><%= newListItems[i] %></p>
+             </div>
+             
+                   <!-- lesson 243 23 minutes in -->
+            <%  } %>
+
+            <form class="item" action="/" method="post">  <!-- lesson 243 triggers the home route -->
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="button">+</button>
+            </form>
+               
+            
+        </div>
+
+
+  
+        
+       
+     
+    </body>
+</html>
